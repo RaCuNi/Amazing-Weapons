@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "amazing_weapons",
+  "version": "${version}",
+
+  "name": "Amazing Weapons Mod",
+  "description": "This mod contains a lot of weapons that have many special attributes.",
+  "authors": [
+    "RaCuNi"
+  ],
+  "contact": {
+    "homepage": "https://RaCuNi.github.io",
+    "sources": "https://github.com/RaCuNi/Amazing-Weapons"
+  },
+
+  "license": "GPL-2.0",
+  "icon": "assets/amazing_weapons/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "thisisracuni.amazing_weapons.AmazingWeapons"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

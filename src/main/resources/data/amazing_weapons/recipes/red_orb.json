@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "BRB",
+      "RER",
+      "BRB"
+    ],
+    "key": {
+      "E": {
+        "item": "minecraft:emerald"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "B": {
+        "item": "minecraft:blaze_powder"
+      }
+    },
+    "result": {
+      "item": "amazing_weapons:red_orb"
+    }
+  }
+

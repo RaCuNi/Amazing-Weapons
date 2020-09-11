@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "amazing_weapons:item/blood_drop"
+    }
+}

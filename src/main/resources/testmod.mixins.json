@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "thisisracucni.amazing_weapons.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "AmazingWeaponsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
