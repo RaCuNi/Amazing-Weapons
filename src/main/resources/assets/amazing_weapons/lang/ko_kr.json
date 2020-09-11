@@ -1,5 +1,8 @@
 {
     "itemGroup.amazing_weapons.general": "환상적인 무기들",
     "item.amazing_weapons.red_orb": "레드 오브",
-    "item.amazing_weapons.red_orb.tooltip": "뭔가 이상한 기분이 듭니다."
+    "item.amazing_weapons.red_orb.tooltip": "뭔가 이상한 기분이 듭니다.",
+    "item.amazing_weapons.blood_drop": "핏방울",
+    "item.amazing_weapons.blood_drop.tooltip": "BLOODY!",
+    "item.amazing_weapons.bloody_blade": "블러디 블레이드"
 }
