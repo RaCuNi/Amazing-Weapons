@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "amazing_weapons:item/bloody_blade"
+    }
+}
