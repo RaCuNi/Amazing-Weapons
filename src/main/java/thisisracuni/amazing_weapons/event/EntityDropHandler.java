@@ -10,7 +10,7 @@ import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.text.Text;
+//import net.minecraft.text.Text;
 import thisisracuni.amazing_weapons.AmazingWeapons;
 
 public class EntityDropHandler implements EntityDropCallback {
@@ -20,7 +20,7 @@ public class EntityDropHandler implements EntityDropCallback {
         if (damageSource.getAttacker() instanceof PlayerEntity) {
 
             Item attackerItem = damageSource.getAttacker().getItemsHand().iterator().next().getItem();
-            damageSource.getAttacker().sendSystemMessage(Text.of(attackerItem.toString()), null);
+            //damageSource.getAttacker().sendSystemMessage(Text.of(attackerItem.toString()), null);
 
             if(attackerItem.equals(AmazingWeapons.DAGGER_SACRIFICE)) {
                 Random rand = new Random();

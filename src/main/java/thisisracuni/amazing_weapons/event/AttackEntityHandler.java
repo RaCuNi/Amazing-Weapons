@@ -2,7 +2,6 @@ package thisisracuni.amazing_weapons.event;
 
 import java.util.Random;
 
-import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.ZombieEntity;
