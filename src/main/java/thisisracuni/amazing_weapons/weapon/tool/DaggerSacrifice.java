@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.text.Text;
+//import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -29,6 +29,8 @@ public class DaggerSacrifice extends SwordItem {
         if(!world.isClient && !playerEntity.isCreative() && playerEntity.getHealth() > 1) {
             //playerEntity.sendMessage(Text.of("Your HP is more than half heart now."), false);
             playerEntity.setHealth(playerEntity.getHealth()-1);
+            //playerEntity.sendMessage(Text.of(Boolean.toString(stack.isDamageable())), false);
+            stack.damage(1, playerEntity, (p) -> {p.sendToolBreakStatus(hand);});
             world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), AmazingWeapons.DAGGER_USE_SOUND_EVENT, SoundCategory.PLAYERS, 2f, 1f);
 
             int randNumber = rand.nextInt(25); // 0 <= randNumber < 25, randNumber is int.

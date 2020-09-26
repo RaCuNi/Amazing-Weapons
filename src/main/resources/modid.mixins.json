@@ -4,6 +4,7 @@
   "package": "thisisracuni.amazing_weapons.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "LivingEntityMixin"
   ],
   "client": [
     "AmazingWeaponsMixin"
