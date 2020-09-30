@@ -10,8 +10,8 @@ import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-//import net.minecraft.text.Text;
 import thisisracuni.amazing_weapons.AmazingWeapons;
+//import net.minecraft.text.Text;
 
 public class EntityDropHandler implements EntityDropCallback {
     @Override
@@ -22,26 +22,31 @@ public class EntityDropHandler implements EntityDropCallback {
             Item attackerItem = damageSource.getAttacker().getItemsHand().iterator().next().getItem();
             //damageSource.getAttacker().sendSystemMessage(Text.of(attackerItem.toString()), null);
 
-            if(attackerItem.equals(AmazingWeapons.DAGGER_SACRIFICE)) {
+            if(entity instanceof Monster) {
+                
                 Random rand = new Random();
                 int randNumber = rand.nextInt(100); // 0 =< randNumber < 100
 
-                if(entity instanceof Monster) {
+                if(attackerItem.equals(AmazingWeapons.DAGGER_SACRIFICE)) {
                     if (randNumber < 3) {entity.dropItem(AmazingWeapons.BLOOD_DROP);}
-                    
-
+                       
                     if(entity instanceof ZombieEntity && randNumber < 5) {
-                        entity.dropItem(Items.ZOMBIE_HEAD); 
-                        return true;
+                           entity.dropItem(Items.ZOMBIE_HEAD); 
                     }
-    
+       
                     if(entity instanceof WitherSkeletonEntity && randNumber < 20) {
-                        entity.dropItem(Items.WITHER_SKELETON_SKULL);
-                        return true;
+                           entity.dropItem(Items.WITHER_SKELETON_SKULL);
                     }
-                }
+               }
 
-            }   
+               if(attackerItem.equals(AmazingWeapons.BLOODY_BLADE)) {
+                   if(randNumber < 12) {entity.dropItem(AmazingWeapons.BLOOD_DROP);}
+               }
+
+               if(attackerItem.equals(AmazingWeapons.BLOODY_BLADE_TRUE)) {
+                   if(randNumber < 25) {entity.dropItem(AmazingWeapons.BLOOD_DROP);}
+               }
+            }
         }
         return false;
     }
