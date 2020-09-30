@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#i#",
+        "ggg",
+        " / "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:quartz"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+       "item": "amazing_weapons:sacrifice_dagger"
+    }
+}
