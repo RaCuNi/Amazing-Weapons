@@ -1,13 +1,10 @@
 package thisisracuni.amazing_weapons.event;
 
-import java.util.Random;
-
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.mob.ZombieEntity;
+import net.minecraft.entity.mob.Monster;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -19,19 +16,20 @@ public class AttackEntityHandler implements AttackEntityCallback {
     
     @Override
     public ActionResult interact(PlayerEntity player, World world, Hand hand, Entity entity, /* Nullable */ EntityHitResult hitResult) {
-        ItemStack playerStack = player.getStackInHand(Hand.MAIN_HAND); 
-        Random rand = new Random();
-        Boolean isAlive = entity.isAlive();
-        ItemStack stack = new ItemStack(Items.WITHER_SKELETON_SKULL);
-        player.sendMessage(Text.of(isAlive.toString()), false);
-        if(!world.isClient && playerStack.getItem().equals(AmazingWeapons.DAGGER_SACRIFICE) && entity instanceof ZombieEntity) {
-            player.sendMessage(Text.of("TEST!"), false);
-            int randNumber = rand.nextInt(2);
-            if(randNumber == 1 && entity.removed) {
-                entity.dropStack(stack);
-                return ActionResult.SUCCESS;
+
+        ItemStack playerStack = player.getStackInHand(Hand.MAIN_HAND);
+        float playerHealth = player.getHealth();
+        float BLOODY_BLADE_TRUE_DRAIN_HEALTH = AmazingWeapons.BLOODY_BLADE_TRUE_DAMAGE / 7;
+
+        if(!world.isClient && playerStack.getItem().equals(AmazingWeapons.BLOODY_BLADE_TRUE) && entity instanceof Monster) {
+            //player.sendMessage(Text.of("TRUE BLOODY BLADE ATTACK TO MONSTER"), false);
+            if(playerHealth >= 10) {
+                player.heal(BLOODY_BLADE_TRUE_DRAIN_HEALTH);
+            } else {
+                player.heal(BLOODY_BLADE_TRUE_DRAIN_HEALTH * 2);
             }
         }
-            return ActionResult.PASS; 
+
+        return ActionResult.PASS; 
     }
 }

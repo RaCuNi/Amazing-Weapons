@@ -5,19 +5,20 @@ import java.util.Random;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+//import net.minecraft.item.Item.Settings;
 import net.minecraft.sound.SoundCategory;
 //import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import thisisracuni.amazing_weapons.AmazingWeapons;
+import thisisracuni.amazing_weapons.weapon.base.DaggerItem;
 
-public class DaggerSacrifice extends SwordItem {
+public class DaggerSacrifice extends DaggerItem {
 
-    public DaggerSacrifice(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
-        super(toolMaterial, attackDamage, attackSpeed, settings);
+    public DaggerSacrifice(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings, double reachBonus, double attackReachBonus) {
+        super(toolMaterial, attackDamage, attackSpeed, settings, reachBonus, attackReachBonus);
     }
 
     @Override
@@ -47,7 +48,4 @@ public class DaggerSacrifice extends SwordItem {
 
         return TypedActionResult.pass(stack);
     }
-
-    
-    
 }
