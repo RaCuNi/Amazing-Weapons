@@ -2,14 +2,13 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [1, 1],
 	"textures": {
-		"1": "Desktop/검붉",
-		"2": "Desktop/검검붉",
-		"3": "Desktop/검붉붉",
-		"4": "Desktop/검붉붉붉",
-		"5": "Desktop/검붉붉붉붉",
-		"8": "Desktop/흑붉",
-		"9": "block/netherite_block",
-		"particle": "block/stone"
+		"1": "amazing_weapons:true_bloody_blade/black",
+		"2": "amazing_weapons:true_bloody_blade/blackblack",
+		"3": "amazing_weapons:true_bloody_blade/blackred",
+		"4": "amazing_weapons:true_bloody_blade/redblack",
+		"5": "amazing_weapons:true_bloody_blade/redredblack",
+		"8": "amazing_weapons:true_bloody_blade/redredredblack",
+		"9": "minecraft:block/netherite_block"
 	},
 	"elements": [
 		{
