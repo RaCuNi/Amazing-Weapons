@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ddd",
+        "dbd",
+        "ddd"
+    ],
+    "key": {
+        "d": {
+            "item": "amazing_weapons:blood_drop"
+        },
+        "b": {
+            "item": "amazing_weapons:bloody_blade"
+        }
+    },
+    "result":{
+        "item":"amazing_weapons:true_bloody_blade"
+    }
+}
