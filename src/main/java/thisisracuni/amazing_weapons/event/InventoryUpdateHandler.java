@@ -2,11 +2,13 @@ package thisisracuni.amazing_weapons.event;
 
 import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 import thisisracuni.amazing_weapons.AmazingWeapons;
+import thisisracuni.amazing_weapons.init.TickTimer;
 import thisisracuni.amazing_weapons.weapon.base.DaggerItem;
 
 public class InventoryUpdateHandler implements InventoryUpdateCallback {
@@ -25,7 +27,10 @@ public class InventoryUpdateHandler implements InventoryUpdateCallback {
             }
             dagger_active = inventory.getMainHandStack().getItem() instanceof DaggerItem;
         }
+        
+
         return ActionResult.PASS;
+        
     }
 
     public void SetRange(boolean change_range) {

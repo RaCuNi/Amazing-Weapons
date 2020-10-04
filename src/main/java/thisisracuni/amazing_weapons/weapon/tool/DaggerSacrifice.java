@@ -42,10 +42,9 @@ public class DaggerSacrifice extends DaggerItem {
                 ItemEntity itemEntity = new ItemEntity(world, playerEntity.getX(), playerEntity.getY() + 1, playerEntity.getZ(), stackBlood);
                 world.spawnEntity(itemEntity);
                 //playerEntity.sendMessage(Text.of("randNumber is 1, spawned blood drop!"), false);
-                return TypedActionResult.success(stack);
+                //return TypedActionResult.success(stack);
             }
         }
-
         return TypedActionResult.pass(stack);
     }
 }
