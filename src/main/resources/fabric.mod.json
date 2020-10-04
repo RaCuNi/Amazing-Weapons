@@ -17,17 +17,23 @@
   "icon": "assets/amazing_weapons/icon.png",
 
   "environment": "*",
+
   "entrypoints": {
     "main": [
       "thisisracuni.amazing_weapons.AmazingWeapons"
+    ],
+
+    "client": [
+      "thisisracuni.amazing_weapons.AmazingWeaponsClient"
     ]
   },
+
   "mixins": [
     "modid.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.4.0",
     "fabric": "*",
     "minecraft": "1.16.x"
   },

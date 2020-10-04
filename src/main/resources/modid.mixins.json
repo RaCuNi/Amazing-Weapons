@@ -6,7 +6,8 @@
   "mixins": [
     "LivingEntityMixin",
     "ItemEntityMixin",
-    "PlayerInventoryMixin"
+    "PlayerInventoryMixin",
+    "PlayerEntityMixin"
   ],
   "client": [
     "AmazingWeaponsMixin"
