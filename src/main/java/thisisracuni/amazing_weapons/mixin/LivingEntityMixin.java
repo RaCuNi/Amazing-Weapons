@@ -10,11 +10,11 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.world.World;
-import thisisracuni.amazing_weapons.event.EntityDropCallback;
+import thisisracuni.amazing_weapons.event.callback.EntityDropCallback;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
-    public LivingEntityMixin(EntityType<?> type, World world) {
+    public LivingEntityMixin(EntityType<? extends LivingEntity> type, World world) {
         super(type, world);
     }
 
