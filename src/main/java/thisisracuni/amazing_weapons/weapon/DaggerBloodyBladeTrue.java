@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -30,9 +31,14 @@ public class DaggerBloodyBladeTrue extends DaggerItem {
         ItemStack thisStack = player.getStackInHand(Hand.MAIN_HAND);
 
             if (!world.isClient) {
-                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.BLOODY, 10 * 20)); //buff
-                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ANEMIA, 14 * 20)); //debuff
-                AbilityBloodyBladeTrue.check_attack_Mobs(world, player, 3);
+                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.BLOODY, 200)); //buff
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 180));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 180));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 180));
+
+                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ANEMIA, 280)); //debuff
+
+                AbilityBloodyBladeTrue.check_attack_Mobs(world, player, 3); //actual ability
             }
     
     

@@ -9,7 +9,7 @@ public class BleedStatusEffect extends StatusEffect {
     public BleedStatusEffect() {
         super(
           StatusEffectType.HARMFUL, // whether beneficial or harmful for entities
-          0x98D982); // color in RGB
+          0xB50707); // color in RGB
     }
      
     // This method is called every tick to check weather it should apply the status effect or not

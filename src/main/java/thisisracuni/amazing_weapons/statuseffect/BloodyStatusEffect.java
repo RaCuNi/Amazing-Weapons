@@ -2,22 +2,20 @@ package thisisracuni.amazing_weapons.statuseffect;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectType;
-import net.minecraft.entity.effect.StatusEffects;
 import thisisracuni.amazing_weapons.weapon.DaggerBloodyBladeTrue;
 
 public class BloodyStatusEffect extends StatusEffect {
 
     public BloodyStatusEffect() {
-        super(StatusEffectType.BENEFICIAL, 0x98D982);
+        super(StatusEffectType.BENEFICIAL, 0xDB2C2C);
     }
 
     // This method is called every tick to check weather it should apply the status effect or not
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         // In our case, we just make it return true so that it applies the status effect every tick.
-        return true;
+        return duration > 1 * 20;
     }
      
     // This method is called when it applies the status effect. We implement custom functionality here.
@@ -32,9 +30,9 @@ public class BloodyStatusEffect extends StatusEffect {
             entity.heal(1.0F);
         }
 
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE)); //HASTE
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST)); //JUMP_BOOST
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION)); //NIGHT VISION
+        //entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE)); //HASTE
+        //entity.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST)); //JUMP_BOOST
+        //entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION)); //NIGHT VISION
     }
     
 }
