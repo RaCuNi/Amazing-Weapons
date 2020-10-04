@@ -3,11 +3,7 @@ package thisisracuni.amazing_weapons;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.tag.TagRegistry;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -24,7 +20,6 @@ import thisisracuni.amazing_weapons.event.EntityDropHandler;
 import thisisracuni.amazing_weapons.event.InventoryUpdateCallback;
 import thisisracuni.amazing_weapons.event.InventoryUpdateHandler;
 import thisisracuni.amazing_weapons.init.Particles;
-import thisisracuni.amazing_weapons.init.TickTimer;
 import thisisracuni.amazing_weapons.item.ItemBloodDrop;
 import thisisracuni.amazing_weapons.item.ItemRedOrb;
 import thisisracuni.amazing_weapons.statuseffect.AnemiaStatusEffect;
@@ -39,8 +34,6 @@ import thisisracuni.amazing_weapons.weapon.tool.DaggerSacrifice;
 
 public class AmazingWeapons implements ModInitializer {
 	public static final String MOD_ID = "amazing_weapons";
-	
-	public static final Tag<Item> DAGGERS_TAG = TagRegistry.item(new Identifier("amazing_weapons", "daggers"));
 
 	// CONSTANTS
 	public static final float BLOODY_BLADE_TRUE_DAMAGE = 7;
@@ -93,9 +86,6 @@ public class AmazingWeapons implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sacrifice_dagger"), DAGGER_SACRIFICE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bloody_blade"), BLOODY_BLADE);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "true_bloody_blade"), BLOODY_BLADE_TRUE);
-
-		//TickTimer
-		//TickTimer.init();
 
 		//Status Effects
 		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "bleed"), BLEED);
