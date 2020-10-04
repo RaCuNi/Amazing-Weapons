@@ -2,12 +2,12 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [1, 1],
 	"textures": {
-		"1": "amazing_weapons:true_bloody_blade_texture/black",
-		"2": "amazing_weapons:true_bloody_blade_texture/blackblack",
-		"3": "amazing_weapons:true_bloody_blade_texture/blackred",
-		"4": "amazing_weapons:true_bloody_blade_texture/redblack",
-		"5": "amazing_weapons:true_bloody_blade_texture/redredblack",
-		"8": "amazing_weapons:true_bloody_blade_texture/redredredblack",
+		"1": "amazing_weapons:true_bloody_blade_texture/blackred",
+		"2": "amazing_weapons:true_bloody_blade_texture/black",
+		"3": "amazing_weapons:true_bloody_blade_texture/redblack",
+		"4": "amazing_weapons:true_bloody_blade_texture/redredblack",
+		"5": "amazing_weapons:true_bloody_blade_texture/redredredblack",
+		"8": "amazing_weapons:true_bloody_blade_texture/blackblack",
 		"9": "minecraft:block/netherite_block"
 	},
 	"elements": [
