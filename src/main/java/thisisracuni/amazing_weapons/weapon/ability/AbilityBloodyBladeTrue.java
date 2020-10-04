@@ -1,4 +1,4 @@
-package thisisracuni.amazing_weapons.ability;
+package thisisracuni.amazing_weapons.weapon.ability;
 
 import java.util.Iterator;
 import java.util.List;
@@ -11,7 +11,7 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
-import thisisracuni.amazing_weapons.AmazingWeapons;
+import thisisracuni.amazing_weapons.init.ModStatusEffects;
 
 public class AbilityBloodyBladeTrue {
 
@@ -28,7 +28,7 @@ public class AbilityBloodyBladeTrue {
         while (iterator2.hasNext()) {
             targetEntity = (Entity) iterator2.next();
             if (targetEntity instanceof HostileEntity) {
-                ((LivingEntity)targetEntity).applyStatusEffect(new StatusEffectInstance(AmazingWeapons.BLEED, 6 * 20, 4/2));
+                ((LivingEntity)targetEntity).applyStatusEffect(new StatusEffectInstance(ModStatusEffects.BLEED, 6 * 20, 4/2));
                 ((LivingEntity)targetEntity).applyStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 5 * 20, 1));
 			}
 		}

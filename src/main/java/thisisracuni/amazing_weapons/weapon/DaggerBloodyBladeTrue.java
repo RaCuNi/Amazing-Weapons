@@ -11,9 +11,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import thisisracuni.amazing_weapons.AmazingWeapons;
-import thisisracuni.amazing_weapons.ability.AbilityBloodyBladeTrue;
-import thisisracuni.amazing_weapons.init.Particles;
+import thisisracuni.amazing_weapons.weapon.ability.AbilityBloodyBladeTrue;
+import thisisracuni.amazing_weapons.init.ModParticles;
+import thisisracuni.amazing_weapons.init.ModStatusEffects;
 import thisisracuni.amazing_weapons.weapon.base.DaggerItem;
 
 public class DaggerBloodyBladeTrue extends DaggerItem {
@@ -30,8 +30,8 @@ public class DaggerBloodyBladeTrue extends DaggerItem {
         ItemStack thisStack = player.getStackInHand(Hand.MAIN_HAND);
 
             if (!world.isClient) {
-                player.addStatusEffect(new StatusEffectInstance(AmazingWeapons.BLOODY, 10 * 20)); //buff
-                player.addStatusEffect(new StatusEffectInstance(AmazingWeapons.ANEMIA, 14 * 20)); //debuff
+                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.BLOODY, 10 * 20)); //buff
+                player.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ANEMIA, 14 * 20)); //debuff
                 AbilityBloodyBladeTrue.check_attack_Mobs(world, player, 3);
             }
     
@@ -42,25 +42,25 @@ public class DaggerBloodyBladeTrue extends DaggerItem {
                 
                 for(Vec3d vec : getCircle(middle, base_radius, 360f, 10f)) {
                     for(float i = 0; i <= 1; i+=0.1) {
-                        world.addParticle(Particles.BLOODY_STORM, vec.x, vec.y+i, vec.z, 0, 0, 0); //1
+                        world.addParticle(ModParticles.BLOODY_STORM, vec.x, vec.y+i, vec.z, 0, 0, 0); //1
                     }
                 }
                 
                 for(Vec3d vec : getCircle(middle, base_radius+0.5f, 360f, 10f)) {
                     for(float i = 0; i <= 1.5; i+=0.1) {
-                        world.addParticle(Particles.BLOODY_STORM, vec.x, vec.y+i+1, vec.z, 0, 0, 0); //2.5
+                        world.addParticle(ModParticles.BLOODY_STORM, vec.x, vec.y+i+1, vec.z, 0, 0, 0); //2.5
                     }
                 }
     
                 for(Vec3d vec : getCircle(middle, base_radius+1f, 360f, 10f)) {
                     for(float i = 0; i <= 3; i+=0.1) {
-                        world.addParticle(Particles.BLOODY_STORM, vec.x, vec.y+i+2.5, vec.z, 0, 0, 0); // 5.5
+                        world.addParticle(ModParticles.BLOODY_STORM, vec.x, vec.y+i+2.5, vec.z, 0, 0, 0); // 5.5
                     }
                 }
     
                 for(Vec3d vec : getCircle(middle, base_radius+1.5f, 360f, 10f)) {
                     for(float i = 0; i <= 2.5; i+=0.1) {
-                        world.addParticle(Particles.BLOODY_STORM, vec.x, vec.y+i+5.5, vec.z, 0, 0, 0); // 8
+                        world.addParticle(ModParticles.BLOODY_STORM, vec.x, vec.y+i+5.5, vec.z, 0, 0, 0); // 8
                     }
                 }
                 //return TypedActionResult.success(thisStack);

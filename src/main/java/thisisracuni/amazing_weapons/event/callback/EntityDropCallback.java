@@ -1,4 +1,4 @@
-package thisisracuni.amazing_weapons.event;
+package thisisracuni.amazing_weapons.event.callback;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;

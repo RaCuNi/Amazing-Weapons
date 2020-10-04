@@ -1,15 +1,15 @@
-package thisisracuni.amazing_weapons.weapon;
+package thisisracuni.amazing_weapons.weapon.base;
 
 import com.google.common.base.Supplier;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
-import thisisracuni.amazing_weapons.AmazingWeapons;
+import thisisracuni.amazing_weapons.init.ModItems;
 
 public enum CustomToolMaterial implements ToolMaterial {
     BLOOD(1, 44, 1.5f, 1.5f, 0, () -> {
-        return Ingredient.ofItems(AmazingWeapons.BLOOD_DROP);
+        return Ingredient.ofItems(ModItems.BLOOD_DROP);
     });
 
     private final int miningLevel;
