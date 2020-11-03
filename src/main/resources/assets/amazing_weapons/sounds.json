@@ -3,6 +3,12 @@
       "sounds": [
         "amazing_weapons:dagger_sacrificing"
       ]
+    },
+
+    "dagger_attack": {
+      "sounds": [
+        "amazing_weapons:dagger_attack"
+      ]
     }
-  }
+}
 

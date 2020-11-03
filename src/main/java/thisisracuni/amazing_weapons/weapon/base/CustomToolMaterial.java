@@ -8,7 +8,7 @@ import net.minecraft.util.Lazy;
 import thisisracuni.amazing_weapons.init.ModItems;
 
 public enum CustomToolMaterial implements ToolMaterial {
-    BLOOD(1, 44, 1.5f, 1.5f, 0, () -> {
+    BLOOD(1, 44, 1.5f, 0.5f, 0, () -> {
         return Ingredient.ofItems(ModItems.BLOOD_DROP);
     });
 

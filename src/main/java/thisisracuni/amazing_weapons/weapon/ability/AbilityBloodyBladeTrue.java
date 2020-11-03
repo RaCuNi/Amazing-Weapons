@@ -20,7 +20,7 @@ public class AbilityBloodyBladeTrue {
         // Scan for hostile mobs
         Box mobBox = (new Box(player.getBlockPos())).expand(radius, 4.0f, radius);
         List<Entity> list2 = world.getNonSpectatingEntities(Entity.class, mobBox);
-        Iterator iterator2 = list2.iterator();
+        Iterator<Entity> iterator2 = list2.iterator();
 
         Entity targetEntity;
 
