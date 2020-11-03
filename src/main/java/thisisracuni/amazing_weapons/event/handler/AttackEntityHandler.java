@@ -2,6 +2,7 @@ package thisisracuni.amazing_weapons.event.handler;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.Monster;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -26,7 +27,7 @@ public class AttackEntityHandler implements AttackEntityCallback {
         ItemStack playerStack = player.getStackInHand(Hand.MAIN_HAND);
         float playerHealth = player.getHealth();
     
-        if(!world.isClient && playerStack.getItem().equals(ModItems.BLOODY_BLADE_TRUE) && entity instanceof Monster) {
+        if(!world.isClient && playerStack.getItem().equals(ModItems.BLOODY_BLADE_TRUE) && entity instanceof LivingEntity) {
             //player.sendMessage(Text.of("TRUE BLOODY BLADE ATTACK TO MONSTER"), false);
             if(playerHealth >= 10) {
                 player.heal(DaggerBloodyBladeTrue.BLOODY_BLADE_TRUE_DRAIN_HEALTH);
