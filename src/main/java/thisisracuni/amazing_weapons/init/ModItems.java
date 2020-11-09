@@ -24,7 +24,7 @@ public class ModItems {
     // ItemGroups, Items, Tools, etc...
 	public static final ItemGroup MOD_GROUP = FabricItemGroupBuilder.build(new Identifier(AmazingWeapons.MOD_ID, "general"), () -> new ItemStack(Items.APPLE));
 	public static final Item RED_ORB = new ItemRedOrb(new Item.Settings().group(MOD_GROUP));
-	public static final Item BLOOD_DROP = new ItemBloodDrop(new Item.Settings().group(MOD_GROUP));
+	public static final Item BLOOD_DROP = new ItemBloodDrop(new Item.Settings().group(MOD_GROUP).maxCount(1));
 	public static final ToolItem DAGGER_SACRIFICE = new DaggerSacrifice(CustomToolMaterial.BLOOD, 2, 0.4f, new Item.Settings().group(MOD_GROUP), DAGGER_ITEM_REACH, DAGGER_ITEM_REACH);
 	public static final ToolItem BLOODY_BLADE = new DaggerItem(CustomToolMaterial.BLOOD, 4, -2.0f, new Item.Settings().group(MOD_GROUP), DAGGER_ITEM_REACH, DAGGER_ITEM_REACH);
     public static final ToolItem BLOODY_BLADE_TRUE = new DaggerBloodyBladeTrue(CustomToolMaterial.BLOOD, (int)BLOODY_BLADE_TRUE_DAMAGE, -1.5f, new Item.Settings().group(MOD_GROUP), DAGGER_ITEM_REACH, DAGGER_ITEM_REACH);

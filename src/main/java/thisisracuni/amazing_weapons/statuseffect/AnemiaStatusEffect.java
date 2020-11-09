@@ -34,6 +34,6 @@ public class AnemiaStatusEffect extends StatusEffect {
 
         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1, 4)); //SLOWNESS
         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 1, 4)); //WEAKNESS
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 1, 4)); //NAUSEA
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 1, 2)); //NAUSEA
     }
 }
