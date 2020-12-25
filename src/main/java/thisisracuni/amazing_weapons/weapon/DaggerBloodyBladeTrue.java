@@ -86,6 +86,8 @@ public class DaggerBloodyBladeTrue extends DaggerItem {
                         world.addParticle(ModParticles.BLOODY_STORM, vec.x, vec.y+i+5.5, vec.z, 0, 0, 0); // 8
                     }
                 }
+
+                
             }
         } else {
             if(!world.isClient) {
