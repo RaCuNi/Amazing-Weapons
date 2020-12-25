@@ -9,6 +9,7 @@
     "item.amazing_weapons.true_bloody_blade": "True Bloody Blade",
     "effect.amazing_weapons.bleed": "Bleed",
     "effect.amazing_weapons.bloody": "BLOODY!",
-    "effect.amazing_weapons.anemia": "Anemia"
-    
+    "effect.amazing_weapons.anemia": "Anemia",
+    "key.category.amazing_weapons": "Amazing Weapons - Keybinds",
+    "key.amazing_weapons.bloody_dash": "Bloody Dash (Special Ability)"
 }
