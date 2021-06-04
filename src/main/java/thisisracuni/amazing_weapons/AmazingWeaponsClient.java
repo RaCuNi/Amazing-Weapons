@@ -13,6 +13,7 @@ public class AmazingWeaponsClient implements ClientModInitializer {
 	public void onInitializeClient() {
         ModParticles.initClient();
         ModKeybinds.initClient();
+
 	}
     
 }
