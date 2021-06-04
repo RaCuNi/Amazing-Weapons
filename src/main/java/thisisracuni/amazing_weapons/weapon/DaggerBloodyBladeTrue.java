@@ -20,12 +20,12 @@ import thisisracuni.amazing_weapons.weapon.ability.AbilityBloodyBladeTrue;
 import thisisracuni.amazing_weapons.init.ModItems;
 import thisisracuni.amazing_weapons.init.ModParticles;
 import thisisracuni.amazing_weapons.init.ModStatusEffects;
+import thisisracuni.amazing_weapons.utils.Riven;
 import thisisracuni.amazing_weapons.weapon.base.DaggerItem;
 
 public class DaggerBloodyBladeTrue extends DaggerItem {
 
     public static float BLOODY_BLADE_TRUE_DRAIN_HEALTH = 1;//AmazingWeapons.BLOODY_BLADE_TRUE_DAMAGE / 7;
-
 
     public DaggerBloodyBladeTrue(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings, double reachBonus, double attackReachBonus) {
         super(toolMaterial, attackDamage, attackSpeed, settings, reachBonus, attackReachBonus);
@@ -86,7 +86,6 @@ public class DaggerBloodyBladeTrue extends DaggerItem {
                         world.addParticle(ModParticles.BLOODY_STORM, vec.x, vec.y+i+5.5, vec.z, 0, 0, 0); // 8
                     }
                 }
-
                 
             }
         } else {
@@ -101,13 +100,12 @@ public class DaggerBloodyBladeTrue extends DaggerItem {
     public static List<Vec3d> getCircle(Vec3d middle, float radius, float maxAngle, float angle) {
         List<Vec3d> positions = new ArrayList<Vec3d>();
         for(float i = 0; i <= maxAngle; i+=angle) {
-            double x = Math.cos(i) * radius;
-            double z = Math.sin(i) * radius;
+            float rad = (float) Math.toRadians(i);
+            double x = Riven.cos(rad) * radius; //Math.cos(i) * radius;
+            double z = Riven.sin(rad) * radius; //Math.sin(i) * radius;
             Vec3d pos = new Vec3d(middle.getX() + x, middle.getY(), middle.getZ() + z);
             positions.add(pos);
         }
         return positions;
     }
-
-
 }
