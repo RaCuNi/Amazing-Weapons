@@ -79,3 +79,4 @@ public class AmazingWeapons implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "true_bloody_blade"), BLOODY_BLADE_TRUE);
 	}
 }
+//l;jkgf
