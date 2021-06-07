@@ -12,7 +12,8 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import thisisracuni.amazing_weapons.AmazingWeapons;
+import thisisracuni.amazing_weapons.init.ModItems;
+import thisisracuni.amazing_weapons.init.ModSounds;
 import thisisracuni.amazing_weapons.weapon.base.DaggerItem;
 
 public class DaggerSacrifice extends DaggerItem {
@@ -32,20 +33,19 @@ public class DaggerSacrifice extends DaggerItem {
             playerEntity.setHealth(playerEntity.getHealth()-1);
             //playerEntity.sendMessage(Text.of(Boolean.toString(stack.isDamageable())), false);
             stack.damage(1, playerEntity, (p) -> {p.sendToolBreakStatus(hand);});
-            world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), AmazingWeapons.DAGGER_USE_SOUND_EVENT, SoundCategory.PLAYERS, 2f, 1f);
+            world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), ModSounds.DAGGER_USE_SOUND_EVENT, SoundCategory.PLAYERS, 2f, 1f);
 
             int randNumber = rand.nextInt(25); // 0 <= randNumber < 25, randNumber is int.
             //playerEntity.sendMessage(Text.of(Integer.toString(randNumber)), false);
 
             if(randNumber == 1) {
-                ItemStack stackBlood = new ItemStack(AmazingWeapons.BLOOD_DROP);
+                ItemStack stackBlood = new ItemStack(ModItems.BLOOD_DROP);
                 ItemEntity itemEntity = new ItemEntity(world, playerEntity.getX(), playerEntity.getY() + 1, playerEntity.getZ(), stackBlood);
                 world.spawnEntity(itemEntity);
                 //playerEntity.sendMessage(Text.of("randNumber is 1, spawned blood drop!"), false);
-                return TypedActionResult.success(stack);
+                //return TypedActionResult.success(stack);
             }
         }
-
         return TypedActionResult.pass(stack);
     }
 }

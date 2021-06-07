@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ActionResult;
-import thisisracuni.amazing_weapons.event.InventoryUpdateCallback;
+import thisisracuni.amazing_weapons.event.callback.InventoryUpdateCallback;
 
 @Mixin(PlayerInventory.class)
 public class PlayerInventoryMixin {
