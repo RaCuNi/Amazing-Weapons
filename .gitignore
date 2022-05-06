@@ -16,6 +16,7 @@
 # fabric
 
 /run
+/remappedSrc
 
 #etc
 

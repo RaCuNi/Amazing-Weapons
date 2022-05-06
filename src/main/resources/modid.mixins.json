@@ -8,7 +8,9 @@
     "PlayerInventoryMixin"
   ],
   "client": [
-    "AmazingWeaponsMixin"
+    "AmazingWeaponsMixin",
+    "BipedEntityModelMixin",
+    "HeldItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

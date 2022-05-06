@@ -72,7 +72,7 @@ public class DaggerItem extends ToolItem /*SwordItem*/ {
             return 15.0F;
         } else {
             Material material = state.getMaterial();
-            return material != Material.PLANT && material != Material.REPLACEABLE_PLANT && material != Material.UNUSED_PLANT && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
+            return material != Material.PLANT && material != Material.REPLACEABLE_PLANT && material != Material.MOSS_BLOCK && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
         }
     }
      
@@ -92,7 +92,7 @@ public class DaggerItem extends ToolItem /*SwordItem*/ {
         return true;
     }
      
-    public boolean isEffectiveOn(BlockState state) {
+    public boolean isSuitableFor(BlockState state) {
         return state.isOf(Blocks.COBWEB);
     }
 }
