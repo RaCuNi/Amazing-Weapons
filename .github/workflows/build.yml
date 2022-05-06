@@ -31,6 +31,9 @@ jobs:
         
     - name: Gradle Build Action
       uses: gradle/gradle-build-action@v2.1.5
-
+      
+    - name: Update File Permission
+      run: chmod +x ./gradlew
+      
     - name: Execute Gradle build
       run: ./gradlew clean build
