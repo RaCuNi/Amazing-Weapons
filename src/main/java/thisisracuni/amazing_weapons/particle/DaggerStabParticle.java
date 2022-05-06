@@ -26,7 +26,7 @@ public class DaggerStabParticle extends SpriteBillboardParticle {
         this.setSpriteForAge(spriteProvider);
     }
 
-    public int getColorMultiplier(float tint) {
+    public int getBrightness(float tint) {
         return 15728880;
     }
 

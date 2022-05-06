@@ -24,7 +24,7 @@ public class ModEvents {
         
         EntityKBCallback.EVENT.register(new EntityKBHandler());
         UseItemCallback.EVENT.register(new UseItemHandler());
-        UseEntityCallback.EVENT.register(new UseEntityHandler());
+        //UseEntityCallback.EVENT.register(new UseEntityHandler());
 
         ClientTickEvents.END_CLIENT_TICK.register(new KeyPressHandler());
     }

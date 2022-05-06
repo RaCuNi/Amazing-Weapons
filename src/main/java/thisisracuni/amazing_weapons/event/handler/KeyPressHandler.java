@@ -11,10 +11,14 @@ import net.minecraft.text.Text;
 import net.minecraft.util.math.Vec3d;
 import thisisracuni.amazing_weapons.init.ModItems;
 import thisisracuni.amazing_weapons.init.ModKeybinds;
+import thisisracuni.amazing_weapons.weapon.GreatSwordSunlight;
 
 public class KeyPressHandler implements ClientTickEvents.EndTick {
 
     public static int dash_cooldown = 0;
+    public static int parry_cooldown = 0;
+    
+    public boolean wasPressed = false;
 
     @Override
     public void onEndTick(MinecraftClient client) {
@@ -36,7 +40,7 @@ public class KeyPressHandler implements ClientTickEvents.EndTick {
         }
 
         //Player Dash
-        if(ModKeybinds.BLOODY_DASH.isPressed() && client.player.isOnGround() && client.player.getMainHandStack().getItem().equals(ModItems.BLOODY_BLADE_TRUE)) {
+        if(ModKeybinds.ABILITY.isPressed() && client.player.isOnGround() && client.player.getMainHandStack().getItem().equals(ModItems.BLOODY_BLADE_TRUE)) {
 
             Random random = client.world.random;
             float w = client.player.getWidth();
@@ -61,6 +65,15 @@ public class KeyPressHandler implements ClientTickEvents.EndTick {
             dash_cooldown = 20 * 3;
         }
 
+        boolean isPressed = ModKeybinds.ABILITY.isPressed();
+
+
+        if(client.player.getMainHandStack().getItem() instanceof GreatSwordSunlight) {
+            if(!isPressed && wasPressed) {
+                client.player.sendChatMessage("key release");
+            }
+        }
+
+        wasPressed = isPressed;
     }
-    
 }
