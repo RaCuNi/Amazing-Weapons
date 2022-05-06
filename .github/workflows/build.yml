@@ -28,7 +28,9 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
-      with:
-        arguments: clean build
+        
+    - name: Gradle Build Action
+      uses: gradle/gradle-build-action@v2.1.5
+
+    - name: Execute Gradle build
+      run: ./gradlew clean build
