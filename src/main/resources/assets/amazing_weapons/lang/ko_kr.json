@@ -3,8 +3,14 @@
     "item.amazing_weapons.red_orb": "레드 오브",
     "item.amazing_weapons.red_orb.tooltip": "뭔가 이상한 기분이 듭니다.",
     "item.amazing_weapons.blood_drop": "핏방울",
-    "item.amazing_weapons.blood_drop.tooltip": "BLOODY!",
+    "item.amazing_weapons.blood_drop.tooltip": "핏빛이다!",
     "item.amazing_weapons.bloody_blade": "블러디 블레이드",
     "item.amazing_weapons.sacrifice_dagger": "희생의 단검",
-    "item.amazing_weapons.true_bloody_blade": "진 블러디 블레이드"
+    "item.amazing_weapons.true_bloody_blade": "진 블러디 블레이드",
+    "item.amazing_weapons.sunlight_greatsword":"썬라이트 그레이트소드",
+    "effect.amazing_weapons.bleed": "출혈",
+    "effect.amazing_weapons.bloody": "핏빛이다!",
+    "effect.amazing_weapons.anemia": "빈혈",
+    "key.category.amazing_weapons": "환상적인 무기들 - 단축키",
+    "key.amazing_weapons.bloody_dash": "핏빛 질주 (특수 능력)"
 }

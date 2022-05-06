@@ -37,7 +37,7 @@ public class ModItems {
 	public static final ToolItem DAGGER_SACRIFICE = new DaggerSacrifice(CustomToolMaterial.BLOOD, 2, 0.4f, new Item.Settings().group(MOD_GROUP), DAGGER_ITEM_REACH, DAGGER_ITEM_REACH);
 	public static final ToolItem BLOODY_BLADE = new DaggerItem(CustomToolMaterial.BLOOD, 4, -2.0f, new Item.Settings().group(MOD_GROUP), DAGGER_ITEM_REACH, DAGGER_ITEM_REACH);
 	public static final ToolItem BLOODY_BLADE_TRUE = new DaggerBloodyBladeTrue(CustomToolMaterial.BLOOD, BLOODY_BLADE_TRUE_DAMAGE, -1.5f, new Item.Settings().group(MOD_GROUP), DAGGER_ITEM_REACH, DAGGER_ITEM_REACH);
-	public static final ToolItem SUNLIGHT_GREATSWORD = new GreatSwordSunlight(CustomToolMaterial.SUNSTONE, SUNLIGHT_GREATSWORD_DAMAGE, 4.0f, new Item.Settings().group(MOD_GROUP), GREATSWORD_ITEM_REACH, GREATSWORD_ITEM_REACH, SUNLIGHT_GREATSWORD_KB, SUNLIGHT_GREATSWORD_KB_RESISTANCE, SUNLIGHT_GREATSWORD_MV_SPEED);
+	public static final ToolItem SUNLIGHT_GREATSWORD = new GreatSwordSunlight(CustomToolMaterial.SUNSTONE, SUNLIGHT_GREATSWORD_DAMAGE, -3.25f, new Item.Settings().group(MOD_GROUP), GREATSWORD_ITEM_REACH, GREATSWORD_ITEM_REACH, SUNLIGHT_GREATSWORD_KB, SUNLIGHT_GREATSWORD_KB_RESISTANCE, SUNLIGHT_GREATSWORD_MV_SPEED);
     
     public static void init() {
         //Items & etc...
