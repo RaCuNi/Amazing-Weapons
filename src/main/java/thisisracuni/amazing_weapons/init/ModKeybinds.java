@@ -7,9 +7,9 @@ import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 
 public class ModKeybinds {
-    public static KeyBinding BLOODY_DASH = new KeyBinding("key.amazing_weapons.bloody_dash", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_V, "key.category.amazing_weapons");
+    public static KeyBinding ABILITY = new KeyBinding("key.amazing_weapons.ability", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_V, "key.category.amazing_weapons");
 
     public static void initClient() {
-        KeyBindingHelper.registerKeyBinding(BLOODY_DASH);
+        KeyBindingHelper.registerKeyBinding(ABILITY);
     }
 }

@@ -3,10 +3,9 @@ package thisisracuni.amazing_weapons.weapon;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import thisisracuni.amazing_weapons.weapon.base.GreatSwordItem;
 
@@ -17,10 +16,24 @@ public class GreatSwordSunlight extends GreatSwordItem {
         super(toolMaterial, attackDamage, attackSpeed, settings, reachBonus, attackReachBonus, knockback, knockbackResistance, movementSpeed);
     }
 
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.BLOCK;
+    }
+  
+    public int getMaxUseTime(ItemStack stack) {
+        return 25;
+    }
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
+        ItemStack itemStack = playerEntity.getStackInHand(hand);
+        playerEntity.setCurrentHand(hand);
+        playerEntity.getItemCooldownManager().set(itemStack.getItem(), 60);
+        return TypedActionResult.consume(itemStack);
+    }
+        
 
-        ItemStack stack = playerEntity.getStackInHand(Hand.MAIN_HAND);
+        /*ItemStack stack = playerEntity.getStackInHand(Hand.MAIN_HAND);
 
         if(!world.isClient) {
             if(playerEntity.isOnGround()) {
@@ -37,7 +50,7 @@ public class GreatSwordSunlight extends GreatSwordItem {
                 world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.BLOCK_ANVIL_DESTROY, SoundCategory.PLAYERS, 2f, 1f);
             }
             
-        }
+        }*/
 
         /*if(world.isClient) {
             if(playerEntity.isOnGround()) {
@@ -47,6 +60,5 @@ public class GreatSwordSunlight extends GreatSwordItem {
                 playerEntity.addVelocity(0, -2, 0);
             }
         }*/
-        return TypedActionResult.pass(stack);
-    }
+        //return TypedActionResult.pass(stack);
 }

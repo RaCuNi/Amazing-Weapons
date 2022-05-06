@@ -12,6 +12,7 @@ import thisisracuni.amazing_weapons.weapon.GreatSwordSunlight;
 import thisisracuni.amazing_weapons.weapon.ability.AbilityGreatSwordSunlight;
 
 public class UseEntityHandler implements UseEntityCallback {
+//Not Using.
 
     @Override
     public ActionResult interact(PlayerEntity player, World world, Hand hand, Entity entity, /*@Nullable*/ EntityHitResult hitResult) {
