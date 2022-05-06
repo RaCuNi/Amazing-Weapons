@@ -11,11 +11,11 @@ import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.HeldItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Arm;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3f;
 import thisisracuni.amazing_weapons.weapon.GreatSwordSunlight;
 
 @Mixin(HeldItemRenderer.class)
@@ -41,7 +41,7 @@ public abstract class HeldItemRendererMixin {
             matrices.translate((double)((float)o * -0.5F), 0.699999988079071D, 0.10000000149011612D);
             //matrices.multiply(Vector3f.POSITIVE_X.getDegreesQuaternion(110F));
             //matrices.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion((float)o * 110F));
-            matrices.multiply(Vector3f.POSITIVE_Z.getDegreesQuaternion((float)o * 80F));
+            matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion((float)o * 80F));
             //float u = (float)item.getMaxUseTime() - ((float)this.client.player.getItemUseTimeLeft() - tickDelta + 1.0F);
 
             

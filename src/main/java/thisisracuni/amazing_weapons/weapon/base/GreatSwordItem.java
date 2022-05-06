@@ -70,7 +70,7 @@ public class GreatSwordItem extends ToolItem {
      
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
         Material material = state.getMaterial();
-        return material != Material.PLANT && material != Material.REPLACEABLE_PLANT && material != Material.UNUSED_PLANT && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
+        return material != Material.PLANT && material != Material.REPLACEABLE_PLANT && material != Material.MOSS_BLOCK && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
     }
      
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
