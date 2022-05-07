@@ -14,6 +14,12 @@
     "key.category.amazing_weapons": "Amazing Weapons - Keybinds",
     "key.amazing_weapons.bloody_dash": "Bloody Dash (Special Ability)",
     "item.amazing_weapons.sunstone": "Sun Stone",
-    "item.amazing_weapons.sunstone.tooltip": "SHINY!"
-
+    "item.amazing_weapons.sunstone.tooltip": "SHINY!",
+    "block.amazing_weapons.sunstone_ore": "Sun Stone Ore",
+    "item.amazing_weapons.steel_ingot": "Steel",
+    "item.amazing_weapons.steel.tooltip": "It looks tough.",
+    "item.amazing_weapons.greatsword_blade_part": "Greatsword Blade",
+    "item.amazing_weapons.greatsword_blade_part.tooltip": "Need two blades.",
+    "item.amazing_weapons.greatsword_handle_part": "Greatsword Handle",
+    "item.amazing_weapons.greatsword_handle_part.tooltip": "A nice handle for an amazing weapon."
 }
