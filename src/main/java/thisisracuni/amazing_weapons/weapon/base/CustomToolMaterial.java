@@ -11,8 +11,8 @@ public enum CustomToolMaterial implements ToolMaterial {
     BLOOD(1, 44, 1.5f, 0.5f, 0, () -> {
         return Ingredient.ofItems(ModItems.BLOOD_DROP);
     }),
-
-    SUNSTONE(1, 5778, 1, 1, 0, null);
+    
+    SUNSTONE(1, 5778, 1, 1, 0, () -> {return Ingredient.ofItems(ModItems.SUNSTONE);});
 
     private final int miningLevel;
     private final int itemDurability;
