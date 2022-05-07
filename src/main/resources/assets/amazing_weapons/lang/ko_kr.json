@@ -12,5 +12,15 @@
     "effect.amazing_weapons.bloody": "핏빛이다!",
     "effect.amazing_weapons.anemia": "빈혈",
     "key.category.amazing_weapons": "환상적인 무기들 - 단축키",
-    "key.amazing_weapons.bloody_dash": "핏빛 질주 (특수 능력)"
+    "key.amazing_weapons.bloody_dash": "핏빛 질주 (특수 능력)",
+    "item.amazing_weapons.sunstone": "썬 스톤",
+    "item.amazing_weapons.sunstone.tooltip": "빛난다!",
+    "block.amazing_weapons.sunstone_ore": "썬 스톤 광석",
+    "item.amazing_weapons.steel_ingot": "강철",
+    "item.amazing_weapons.steel.tooltip": "단단해 보인다.",
+    "item.amazing_weapons.greatsword_blade_part": "그레이트소드 날",
+    "item.amazing_weapons.greatsword_blade_part.tooltip": "두개의 그레이트 소드 날이 필요할 것같다.",
+    "item.amazing_weapons.greatsword_handle_part": "그레이트소드의 손잡이",
+    "item.amazing_weapons.greatsword_handle_part.tooltip": "환상적인 무기의 nice한 손잡이다."
+
 }
