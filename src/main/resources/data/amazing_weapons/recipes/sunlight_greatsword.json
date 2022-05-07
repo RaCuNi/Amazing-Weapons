@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " B ",
+      " B ",
+      " H "
+    ],
+    "key": {
+      "B": {
+        "item": "amazing_weapons:greatsword_blade_part"
+      },
+      "H": {
+        "item": "amazing_weapons:greatsword_handle_part"
+      }
+    },
+    "result": {
+      "item": "amazing_weapons:sunlight_greatsword"
+    }
+  }

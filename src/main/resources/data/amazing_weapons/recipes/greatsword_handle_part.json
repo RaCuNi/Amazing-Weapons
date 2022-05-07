@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "SSS",
+      " I ",
+      " I "
+    ],
+    "key": {
+      "S": {
+        "item": "amazing_weapons:steel_ingot"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "amazing_weapons:greatsword_handle_part"
+    }
+  }

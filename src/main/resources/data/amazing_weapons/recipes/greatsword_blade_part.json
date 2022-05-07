@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "SIS",
+      "SIS",
+      "SIS"
+    ],
+    "key": {
+      "S": {
+        "item": "amazing_weapons:sunstone"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "amazing_weapons:greatsword_blade_part"
+    }
+  }
