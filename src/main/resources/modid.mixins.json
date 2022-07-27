@@ -10,7 +10,10 @@
   "client": [
     "AmazingWeaponsMixin",
     "BipedEntityModelMixin",
-    "HeldItemRendererMixin"
+    "HeldItemRendererMixin",
+    "SwingOffsetMixin",
+    "SwingArmMixin",
+    "TP_HeldItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

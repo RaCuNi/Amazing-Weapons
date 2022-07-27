@@ -12,8 +12,7 @@ group = project.maven_group
 
 repositories {
 	maven {url "https://maven.jamieswhiteshirt.com/libs-release/"}
-	//maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-	//maven { url 'https://repo.repsy.io/mvn/heroesunited/default' }
+	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 }
 
 dependencies {
@@ -31,9 +30,8 @@ dependencies {
 	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:1.0.1"
     include "com.jamieswhiteshirt:reach-entity-attributes:1.0.1"
 
-	//modImplementation 'software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.33:dev'
-
-    //compile 'xyz.heroesunited:hu-core:2.5-alpha-2'
+	//modImplementation 'software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.83:dev'
+	//implementation 'javax.vecmath:vecmath:1.5.2'
 }
 
 processResources {
