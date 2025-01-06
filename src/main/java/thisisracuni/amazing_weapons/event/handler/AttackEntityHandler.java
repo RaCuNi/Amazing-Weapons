@@ -59,12 +59,14 @@ public class AttackEntityHandler implements AttackEntityCallback {
                     //AbilityGreatSwordSunlight.upper_attack_aoe(world, playerEntity);
                     stack.damage(10, player, (p) -> {p.sendToolBreakStatus(hand);});
                     world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.PLAYERS, 2f, 1f);
+                    player.addVelocity(0, 1.2, 0);
                 } else {
                     AbilityGreatSwordSunlight.takedown_attack_aoe(world, player, entity);
                     if(!player.getItemCooldownManager().isCoolingDown(stack.getItem())){
                         player.getItemCooldownManager().set(stack.getItem(), 40);
                         stack.damage(20, player, (p) -> {p.sendToolBreakStatus(hand);});
                         world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_ANVIL_DESTROY, SoundCategory.PLAYERS, 2f, 1f);
+                        player.addVelocity(0, -0.8, 0);
                     }
                 }
             }
@@ -75,7 +77,7 @@ public class AttackEntityHandler implements AttackEntityCallback {
                 if(player.isOnGround()) {
                     player.addVelocity(0, 1.2, 0);
                 } else {
-                    player.addVelocity(0, -1.5, 0);
+                    player.addVelocity(0, -0.8, 0);
                 }
             }
         }

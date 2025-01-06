@@ -31,6 +31,7 @@ public class ModEvents {
         ClientTickEvents.END_CLIENT_TICK.register(new KeyPressHandler());
 
         //LootTableLoadingCallback.EVENT.register(new LootTableLoadingHandler());
+
     }
     
 }

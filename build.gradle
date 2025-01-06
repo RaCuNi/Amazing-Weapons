@@ -12,8 +12,21 @@ group = project.maven_group
 
 repositories {
 	maven {url "https://maven.jamieswhiteshirt.com/libs-release/"}
+
 	//maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-	//maven { url 'https://repo.repsy.io/mvn/heroesunited/default' }
+
+	maven { 
+        name = "Ladysnake Mods"
+        url = "https://ladysnake.jfrog.io/artifactory/mods"
+        content {
+            includeGroup 'io.github.ladysnake'
+            includeGroupByRegex '(dev|io\\.github)\\.onyxstudios.*'
+        }
+    }
+    maven {
+        name = "Nexus Repository Manager"
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
 }
 
 dependencies {
@@ -31,9 +44,15 @@ dependencies {
 	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:1.0.1"
     include "com.jamieswhiteshirt:reach-entity-attributes:1.0.1"
 
-	//modImplementation 'software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.33:dev'
+	//modImplementation 'software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.83:dev'
+	//implementation 'javax.vecmath:vecmath:1.5.2'
 
-    //compile 'xyz.heroesunited:hu-core:2.5-alpha-2'
+	modImplementation "io.github.ladysnake:locki:${locki_version}"
+    include "io.github.ladysnake:locki:${locki_version}"
+    // locki dependencies
+    include "me.lucko:fabric-permissions-api:${fpa_version}"
+    include "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${cca_version}"
+    include "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${cca_version}"
 }
 
 processResources {

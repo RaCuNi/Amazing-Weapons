@@ -2,12 +2,19 @@ package thisisracuni.amazing_weapons.event.handler;
 
 import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 
+import io.github.ladysnake.locki.DefaultInventoryNodes;
+import io.github.ladysnake.locki.InventoryLock;
+import io.github.ladysnake.locki.Locki;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
+import thisisracuni.amazing_weapons.AmazingWeapons;
 import thisisracuni.amazing_weapons.event.callback.InventoryUpdateCallback;
 import thisisracuni.amazing_weapons.init.ModItems;
+import thisisracuni.amazing_weapons.weapon.GreatSwordSunlight;
 import thisisracuni.amazing_weapons.weapon.base.DaggerItem;
 import thisisracuni.amazing_weapons.weapon.base.GreatSwordItem;
 
@@ -16,6 +23,10 @@ public class InventoryUpdateHandler implements InventoryUpdateCallback {
     PlayerEntity player;
     boolean dagger_active = false;
     boolean greatSword_active = false;
+
+    //Locki
+	public static final InventoryLock LOCK = Locki.registerLock(new Identifier(AmazingWeapons.MOD_ID, "lock"));
+    boolean isLocked = false;
 
     public ActionResult interact(PlayerInventory inventory) {
 
@@ -34,6 +45,22 @@ public class InventoryUpdateHandler implements InventoryUpdateCallback {
             greatSword_active = inventory.getMainHandStack().getItem() instanceof GreatSwordItem;
         }
         
+        if(!world.isClient) {
+            if(inventory.getMainHandStack().getItem() instanceof GreatSwordSunlight && !isLocked) {
+                if(!inventory.offHand.isEmpty()) {
+                    ItemStack stack = inventory.offHand.get(0);
+                    player.dropStack(stack);
+                    inventory.offHand.clear();
+                }
+                LOCK.lock(player, DefaultInventoryNodes.OFF_HAND);
+                isLocked = true;
+            }
+            
+            if(!(inventory.getMainHandStack().getItem() instanceof GreatSwordSunlight) && isLocked) {
+                LOCK.unlock(player, DefaultInventoryNodes.OFF_HAND);
+                isLocked = false;
+            }
+        }
 
         return ActionResult.PASS;
         
